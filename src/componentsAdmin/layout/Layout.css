@@ -1,0 +1,70 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.layout-container {
+  display: flex;
+  flex: 1;
+  transition: all 0.3s ease;
+  position: relative;
+  /* margin-bottom: 0px; */
+  /* border : red solid 10px */
+
+}
+
+/* Fondo oscuro detrás del sidebar en móviles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+/* Solo visible cuando el sidebar está abierto */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mostrar overlay solo en pantallas pequeñas */
+@media (min-width: 769px) {
+  .overlay {
+    display: none;
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.with-sidebar {
+  margin-left: 250px;
+}
+
+.main-content.full-width {
+  margin-left: 0;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+  .main-content.with-sidebar {
+    margin-left: 0;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+}

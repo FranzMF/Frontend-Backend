@@ -1,0 +1,139 @@
+/* Fondo general - Ahora claro */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Fondo muy claro, patrones sutiles */
+  background: repeating-linear-gradient(
+    45deg,
+    #f0f4f8, /* Gris muy claro */
+    #f0f4f8 10px,
+    #ffffff 60px, /* Blanco puro */
+    #ffffff 60px
+  );
+}
+
+/* Caja principal dividida en 2 - Ahora clara */
+.login-box {
+  display: flex;
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 1.2rem;
+  overflow: hidden;
+  /* Sombra más sutil para fondo claro */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+  width: 900px;
+  max-width: 95%;
+}
+
+/* Formulario (lado izquierdo) */
+.login-form-section {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937; /* Color oscuro para el texto del título */
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: #6b7280; /* Gris medio para el texto secundario */
+  margin-bottom: 2rem;
+}
+
+/* Inputs - Ahora claros con borde sutil */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  /* Borde sutil para distinguirlos del fondo */
+  border: 1px solid #d1d5db; 
+  outline: none;
+  background: #f9fafb; /* Fondo muy claro para el input */
+  color: #1f2937; /* Texto oscuro para el input */
+  font-size: 1rem;
+}
+
+.login-input::placeholder {
+  color: #9ca3af; /* Gris sutil para el placeholder */
+}
+
+/* Opciones (checkbox y link) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4b5563; /* Color oscuro para el texto de las opciones */
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+  color: #2563eb; /* Un azul primario para enlaces */
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Botón principal - Mantenemos el color de énfasis para el botón */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb; /* Azul primario para el botón */
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff; /* Texto blanco para el botón */
+}
+
+.login-button:hover {
+  background: #1d4ed8; /* Un azul más oscuro al pasar el ratón */
+}
+
+/* Texto de registro */
+.register-text {
+  margin-top: 1.5rem;
+  color: #6b7280; /* Gris medio para el texto de registro */
+  font-size: 0.9rem;
+}
+
+.register-text a {
+  color: #2563eb; /* Azul primario para el enlace de registro */
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Sección derecha (branding/ilustración) - Ahora clara */
+.login-illustration {
+  flex: 1;
+  /* Gradiente claro, usando el azul primario y blanco */
+  background: linear-gradient(135deg, #2563eb, #8b5cf6); 
+  color: #ffffff; /* Texto blanco sobre fondo de color */
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.login-right {
+  flex: 1;
+  /* Mantener imagen de fondo, asegúrate de que contraste con el fondo claro del login-box */
+  background-image: url("./login.webp"); 
+  background-size: cover;
+  background-position: center;
+}
